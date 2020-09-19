@@ -2,22 +2,22 @@ package com.gittest;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
-public class GitTest {
+public class GitTest implements Cloneable{
     public static void main(String[] args) {
         System.out.println("git Test");
         System.out.println("2");
         System.out.println("3");
         System.out.println("4");
+        Map<String,Integer> map = new HashMap<>();
     }
     @Test
-    public void  test(){
-        int[] nums = new int[]{-10,-2,-1,0,0,0,0,0,0,2,3,4};
-        System.out.println(diffSquareNum(nums));
+    public void  test() throws CloneNotSupportedException {
+        GitTest g = new GitTest();
+        Object clone = g.clone();
+        System.out.println(g);
+        System.out.println(clone);
     }
     @Test
     public void test01(){
